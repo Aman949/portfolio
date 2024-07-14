@@ -128,7 +128,7 @@ const Work = () => {
                   <div className='h-[460px] relative group flex justify-center items-center bg-pink-50/20'>
                     <div className='absolute top-0 bottom-0 w-full h-full  bg-black/10 z-10'></div>
                      <div className='relative w-full h-full'>
-                      <Image src={project.image} fill className='object-cover' />
+                      <Image src={project.image} fill className='object-cover' alt="image" />
                      </div>
                   </div>
                 </SwiperSlide>
