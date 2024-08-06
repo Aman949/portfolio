@@ -5,6 +5,13 @@ import Socials from '@/components/Socials';
 import Photo from '@/components/Photo';
 
 const Home = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = './assets/assets/resume.pdf'; // Correct path to your resume file
+    link.download = 'Aman_Bhandari_Resume.pdf'; // Desired name for the downloaded file
+    link.click();
+  };
+
   return (
     <section className='h-full'>
       <div className="container mx-auto h-full">
@@ -16,7 +23,12 @@ const Home = () => {
               proficient in various programming languages and technologies.
             </p>
             <div className='flex flex-col xl:flex-row items-center gap-8'>
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+                onClick={handleDownload}
+              >
                 <span>Download Resume</span>
                 <FiDownload className='text-xl' />
               </Button>
@@ -35,3 +47,4 @@ const Home = () => {
 };
 
 export default Home;
+
