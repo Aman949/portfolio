@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi';
@@ -7,8 +8,8 @@ import Photo from '@/components/Photo';
 const Home = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = './assets/assets/resume.pdf'; // Correct path to your resume file
-    link.download = 'Aman_Bhandari_Resume.pdf'; // Desired name for the downloaded file
+    link.href = './assets/assets/resume.pdf'; 
+    link.download = 'Aman_Bhandari_Resume.pdf'; 
     link.click();
   };
 
